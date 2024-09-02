@@ -1,0 +1,59 @@
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7.6rem;
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-regular);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 1.6rem;
+  margin-bottom: 1.6rem;
+  box-sizing: border-box;
+}
+
+.weather__icon-info {
+  flex: 0 0 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather__icon {
+  width: 8rem;
+  height: 8rem;
+}
+
+.weather__description {
+  flex: 1;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-bold);
+  text-align: center; /* Center the description horizontally */
+  position: relative;
+  top: -2.4rem;
+}
+
+.weather__city-info {
+  flex: 0 0 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center city info vertically */
+}
+
+.weather__temp {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.weather__city {
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+  text-align: center;
+  margin-top: 0.2rem;
+}
+
+.forecast-container {
+  max-height: 200px; /* Set your desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}

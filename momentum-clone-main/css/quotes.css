@@ -1,0 +1,22 @@
+.quote {
+  display: flex;
+  justify-content: space-between;
+  font-weight: var(--weight-bold);
+  font-size: var(--font-small);
+  color: var(--color-black);
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-small);
+  padding: 0.8rem 1.6rem;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  margin-bottom: 1.2rem;
+}
+
+.quote__text {
+  width: 45rem;
+  padding-right: 0.8rem;
+}
+
+.quote__author {
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  padding-left: 1.6rem;
+}

@@ -1,0 +1,23 @@
+.datetime {
+  width: 30%;
+  text-align: center;
+  background-color: var(--color-white-opacity);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--size-border-radius-small);
+  margin-left: 1.2rem;
+}
+
+.date {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.4rem 0;
+}
+
+.clock {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  padding: 0.4rem 0;
+}

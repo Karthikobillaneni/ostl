@@ -1,0 +1,27 @@
+.greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-small);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  padding: 1.2rem;
+}
+
+.welcome {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+}
+
+.logout {
+  font-size: var(--font-small);
+  color: var(--color-black);
+  transition: all var(--animation-duration) ease-out;
+}
+
+.logout:hover {
+  color: rgba(255, 255, 255, 0.7);
+  transform: scale(1.1);
+}

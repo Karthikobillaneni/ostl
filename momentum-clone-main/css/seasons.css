@@ -1,0 +1,58 @@
+.seasons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 6.8rem;
+  top: -5.25rem;
+  width: 24rem;
+  height: 5rem;
+  border-top-left-radius: var(--size-border-radius-regular);
+  border-top-right-radius: var(--size-border-radius-regular);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  background-color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+}
+
+.seasons .season {
+  width: 6rem;
+  height: 5rem;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-bottom: none;
+  opacity: 0.8;
+  transition: all 300ms ease-out;
+}
+
+.seasons .season:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  opacity: 1;
+}
+
+.season[data-season='spring'] {
+  background: url('../images/icons/seasons.png') no-repeat 12px 7px;
+  background-size: 4rem;
+  border-top-left-radius: var(--size-border-radius-regular);
+  border-right: none;
+}
+
+.season[data-season='summer'] {
+  background: url('../images/icons/seasons.png') no-repeat 11px -43px;
+  background-size: 3.8rem;
+  border-right: none;
+}
+
+.season[data-season='autumn'] {
+  background: url('../images/icons/seasons.png') no-repeat 10px -96px;
+  background-size: 4rem;
+  border-right: none;
+}
+
+.season[data-season='winter'] {
+  background: url('../images/icons/seasons.png') no-repeat 10px -122px;
+  background-size: 3.4rem;
+  border-top-right-radius: var(--size-border-radius-regular);
+}

@@ -1,0 +1,122 @@
+/* Global */
+:root {
+  /* Color */
+  --color-black: rgb(43, 41, 41);
+  --color-white-opacity: rgba(255, 255, 255, 0.15);
+
+  /* Font size */
+  --font-large: 2.6rem;
+  --font-medium: 2rem;
+  --font-regular: 1.8rem;
+  --font-small: 1.6rem;
+  --font-micro: 1.4rem;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 500;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius-large: 4rem;
+  --size-border-radius-medium: 2.8rem;
+  --size-border-radius-regular: 1.4rem;
+  --size-border-radius-small: 1rem;
+  --size-border-radius-micro: 0.8rem;
+
+  /* Annimation */
+  --animation-duration: 300ms;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Alegreya Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('../images/seasons/winter/winter2.jpg') no-repeat center/cover;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.board-container {
+  padding-top: 8rem;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 70%;
+  padding: 4.2em;
+  margin: auto;
+  backdrop-filter: blur(30px);
+  border-radius: var(--size-border-radius-large);
+  border: 2.5px solid rgba(255, 255, 255, 0.25);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-container {
+  width: 70%;
+  padding: 2.2em;
+  background-color: var(--color-white-opacity);
+  border-radius: var(--size-border-radius-medium);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.board__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.main-body-container {
+  display: flex;
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.side-container {
+  width: 30%;
+  margin-left: 3.2rem;
+  padding: 2.2em;
+  border-radius: var(--size-border-radius-medium);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: var(--color-white-opacity);
+}

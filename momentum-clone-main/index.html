@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apps.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/datetime.css">
+    <link rel="stylesheet" href="css/greeting.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/quotes.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/seasons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="src/canvas.js" defer></script>
+    <script src="src/datetime.js" defer></script>
+    <script src="src/login.js" defer></script>
+    <script src="src/music.js" defer></script>
+    <script src="src/quotes.js" defer></script>
+    <script src="src/seasons.js" defer></script>
+    <script src="src/todo.js" defer></script>
+    <script src="src/weather.js" defer></script>
+    <script src="src/apps.js" defer></script>
+</head>
+<body>
+    <section class="login hidden">
+        <form class="login-form">
+            <h1 class="login__text">HAVE A GOOD DAY !</h1>
+            <input class="login__input" required maxlength="17" type="text" placeholder="What is your name?"/>
+            <button class="login__button" type="submit">Submit</button>
+        </form>
+    </section>
+    <div class="board-container">
+        <section class="board">
+            <section class="seasons">
+                <div class="season" data-season="spring"></div>
+                <div class="season" data-season="summer"></div>
+                <div class="season" data-season="autumn"></div>
+                <div class="season" data-season="winter"></div>
+            </section>
+            <div class="containers">
+                <div class="main-container">
+                    <header class="board__header">
+                        <div class="greeting">
+                            <div class="welcome">Hope your day is going well,</div>
+                            <button class="logout" title="Reset username"><i class="fas fa-sign-out-alt"></i></button>
+                        </div>
+                        <div class="datetime">
+                            <div class="date"></div>
+                            <div class="clock"></div>
+                        </div>
+                    </header>
+                    <section class="quote">
+                        <span class="quote__text"></span>
+                        <span class="quote__author"></span>
+                    </section>
+                    <div class="main-body-container">
+                        <section class="todo">
+                            <div class="todo__lists">
+                                <div class="todo__list">
+                                    <div class="title">MORNING</div>
+                                    <ul class="items morning"></ul>
+                                </div>
+                                <div class="todo__list">
+                                    <div class="title">AFTERNOON</div>
+                                    <ul class="items afternoon"></ul>
+                                </div>
+                                <div class="todo__list">
+                                    <div class="title">EVENING</div>
+                                    <ul class="items evening"></ul>
+                                </div>
+                            </div>
+                            <form class="todo__form">
+                                <select name="times" class="select-time">
+                                    <option value="morning" selected>MORNING</option>
+                                    <option value="afternoon">AFTERNOON</option>
+                                    <option value="evening">EVENING</option>
+                                </select>
+                                <input class="todo__input" type="text" placeholder="Write a Todo">
+                                <button class="todo__button" type="submit">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+                <div class="side-container">
+                    <section class="weather">
+                        <div class="weather__icon-info">
+                            <img id="weatherIcon" class="weather__icon" src="" alt="Weather Icon">
+                            <div id="weatherDescription" class="weather__description"></div>
+                        </div>
+                        <div class="weather__city-info">
+                            <div id="weatherTemp" class="weather__temp"></div>
+                            <div id="weatherCity" class="weather__city"></div>
+                        </div>
+                        <!-- Container for weather forecast -->
+                        <div class="weather-forecast"></div>
+                    </section>
+                    <section class="music-player">
+                        <img class="music-player__cover" src="https://linkstorage.linkfire.com/medialinks/images/d0681c42-37c3-44ea-876c-77d9765ec709/artwork-440x440.jpg" alt="music cover image">
+                        <div class="music-player__title">Severin & Like Lions - I Hear Sleigh Bells</div>
+                        <div class="music-player__controller">
+                            <button class="controller-btn music-player__prev"><i class="fas fa-step-backward"></i></button>
+                            <button class="controller-btn music-player__play"><i class="fas fa-play"></i></button>
+                            <button class="controller-btn music-player__next"><i class="fas fa-step-forward"></i></button>
+                        </div>
+                    </section>
+                    <div class="canvas-appbox-container">
+                        <section class="canvas">
+                            <div class="canvas__btn">
+                                <div class="canvas__icon"></div>
+                            </div>
+                        </section>
+                        <section class="app-box">
+                            <span class="app-box__text">CLOSE APPS</span>
+                            <i class="fas fa-caret-left app-box__icon"></i>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <ul class="apps">
+                <li class="app"><a href="https://www.google.com/" target="_blacnk" data-app-type="google"></a></li>
+                <li class="app"><a href="https://www.youtube.com/" target="_blacnk" data-app-type="youtube"></a></li>
+                <li class="app"><a href="https://www.linkedin.com/" target="_blacnk" data-app-type="linkedin"></a></li>
+                <li class="app"><a href="https://twitter.com/" target="_blacnk" data-app-type="twitter"></a></li>
+                <li class="app"><a href="https://www.facebook.com/" target="_blacnk" data-app-type="facebook"></a></li>
+                <li class="app"><a href="https://www.instagram.com/" target="_blacnk" data-app-type="instagram"></a></li>
+            </ul>
+        </section>
+    </div>
+    <div class="canvas-modal hidden">
+        <div class="canvas-container">
+            <button class="canvas-close"><i class="fas fa-times"></i></button>
+            <canvas class="canvas-board"></canvas>
+            <div class="controls">
+                <div class="controls__range">
+                    <input type="range" class="range" min="0.1" max="5.0" value="2.5" step="0.1">
+                </div>
+                <div class="controls__btns">
+                    <button class="mode">Paint</button>
+                    <button class="clear">Clear</button>
+                    <button class="save">Save</button>
+                </div>
+                <div class="controls__colors">
+                    <div class="controls__color" style="background-color: #ff0000;"></div>
+                    <div class="controls__color" style="background-color: #fc6404;"></div>
+                    <div class="controls__color" style="background-color: #fcd444;"></div>
+                    <div class="controls__color" style="background-color: #8cc43c;"></div>
+                    <div class="controls__color" style="background-color: #029658;"></div>
+                    <div class="controls__color" style="background-color: #1abc9c;"></div>
+                    <div class="controls__color" style="background-color: #5bc0de;"></div>
+                    <div class="controls__color" style="background-color: #1a5bbc;"></div>
+                    <div class="controls__color" style="background-color: #6454ac;"></div>
+                    <div class="controls__color" style="background-color: #fc8c84;"></div>
+                    <div class="controls__color" style="background-color: #ffffff;"></div>
+                    <div class="controls__color" style="background-color: #2c2c2c;"></div>
+                    <div class="painting-color"><i class="fas fa-paint-brush"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
